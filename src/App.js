@@ -67,7 +67,9 @@ export default function App() {
       </div>
     );
   }
-
+if (!currentUser && !username && !password) {
+  return <div className="p-4 text-red-600">App failed to load.</div>;
+}
   return (
     <div className="p-6 text-center">
       <h1 className="text-3xl font-bold text-blue-700">Welcome, {currentUser.username} ({currentUser.role})</h1>
